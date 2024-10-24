@@ -24,18 +24,18 @@ app.use(express.json())
 dotenv.config()
 
 const routesInfo = [
-  { method: 'GET', endpoint: '/api/clientes', description: 'Obtener todos los clientes' },
-  { method: 'GET', endpoint: '/api/clientes/:id', description: 'Obtener un cliente específico por ID' },
-  { method: 'PUT', endpoint: '/api/cliente/estado/:id', description: 'Actualizar el estado de un cliente por ID' },
-  { method: 'POST', endpoint: '/api/clientes', description: 'Crear un nuevo cliente' },
-  { method: 'PUT', endpoint: '/api/clientes/:id', description: 'Editar un cliente por ID' }
+  { metodo: 'GET', endpoint: '/api/clientes', descripcion: 'Obtener todos los clientes' },
+  { metodo: 'GET', endpoint: '/api/clientes/:id', descripcion: 'Obtener un cliente específico por ID' },
+  { metodo: 'PUT', endpoint: '/api/cliente/estado/:id', descripcion: 'Actualizar el estado de un cliente por ID' },
+  { metodo: 'POST', endpoint: '/api/clientes', descripcion: 'Crear un nuevo cliente' },
+  { metodo: 'PUT', endpoint: '/api/clientes/:id', descripcion: 'Editar un cliente por ID' }
 ];
 
 // Mostrar lista de endpoints
 app.get('/', (req, res) => {
   res.json({
-    message: 'Lista de endpoints disponibles:',
-    routes: routesInfo
+    Mensaje: 'Lista de endpoints disponibles:',
+    rutas: routesInfo
   });
 });
 
